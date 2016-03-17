@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="to.us.ekimhest.guessinggame.GameOver">
+
+    <TextView
+        android:id="@+id/you_win_text_view"
+        android:text="You Win!!"
+        android:textSize="64sp"
+        android:textColor="@color/black"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/score"
+        android:text="It took you 8 guesses"
+        android:textSize="32sp"
+        android:textColor="@color/black"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/you_win_text_view"
+        android:layout_marginTop="128dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/play_again_button"
+        android:text="Play Again"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/score"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="128dp"
+
+        android:onClick="restart" />
+
+    <Button
+        android:id="@+id/menu_button"
+        android:text="Menu"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/play_again_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+</RelativeLayout>
