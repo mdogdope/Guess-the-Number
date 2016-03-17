@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:layout_marginTop="32dp" />
+        android:layout_marginTop="16dp" />
 
     <ImageView
         android:id="@+id/logo"
@@ -26,6 +26,18 @@
         android:layout_below="@id/title_text_view"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/high_score_text_view"
+        android:text="High Score: 4"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/play_button"
@@ -40,4 +52,17 @@
         android:layout_marginTop="64dp"
 
         android:onClick="playButton" />
+
+    <ImageButton
+        android:src="@drawable/ic_settings_black_48dp"
+
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+
+        android:onClick="settings" />
 </RelativeLayout>

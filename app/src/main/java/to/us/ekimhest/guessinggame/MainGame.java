@@ -1,6 +1,8 @@
 package to.us.ekimhest.guessinggame;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.Image;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -142,6 +144,12 @@ public class MainGame extends AppCompatActivity {
     public void keyPadEnter(View view) {
         inputField = Integer.parseInt(inputFieldView);
         if (inputField == randomNumber) {
+
+            SharedPreferences highScorePrefs = this.getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = highScorePrefs.edit();
+            editor.putInt("highScore", score);
+            editor.commit();
+
             Intent gameOver = new Intent(this, GameOver.class);
             gameOver.putExtra("score", score);
             startActivity(gameOver);

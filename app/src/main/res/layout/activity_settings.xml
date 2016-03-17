@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="to.us.ekimhest.guessinggame.Settings">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:src="@drawable/ic_exit_to_app_black_48dp"
+
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:scaleType="centerCrop"
+        android:layout_alignParentRight="true"
+
+        android:onClick="back" />
+
+    <Button
+        android:text="Reset High Score"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/back"
+
+        android:onClick="reset" />
+</RelativeLayout>
