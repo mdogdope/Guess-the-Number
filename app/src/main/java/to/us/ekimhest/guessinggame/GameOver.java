@@ -24,6 +24,11 @@ public class GameOver extends AppCompatActivity {
         startActivity(restart);
     }
 
+    public void menuButton(View view) {
+        Intent menu = new Intent(this, MainActivity.class);
+        startActivity(menu);
+    }
+
     //Methods====================
     private void scoreDisplayMethod(String scoreText) {
         TextView scoreTextView = (TextView) findViewById(R.id.score);
