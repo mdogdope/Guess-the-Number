@@ -1,4 +1,6 @@
 <resources>
-    <string name="app_name">Guessing the Number</string>
+    <string name="app_name">Guess the Number</string>
     <string name="banner_ad_unit_id">ca-app-pub-7283483668136736/5169208003</string>
+    <string name="main_menu_banner_ad">ca-app-pub-7283483668136736/1145000804</string>
+    <string name="game_over_banner_ad">ca-app-pub-7283483668136736/3958866409</string>
 </resources>

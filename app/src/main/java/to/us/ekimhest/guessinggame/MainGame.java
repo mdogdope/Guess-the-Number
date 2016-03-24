@@ -28,6 +28,7 @@ public class MainGame extends AppCompatActivity {
     int inputField;
     int randomNumber;
     int score = 1;
+    int highScore;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -41,9 +42,12 @@ public class MainGame extends AppCompatActivity {
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice("D9A6F8EAFC051A2FE60ACC2A62417A13")
+                //.addTestDevice("D9A6F8EAFC051A2FE60ACC2A62417A13")
                 .build();
         mAdView.loadAd(adRequest);
+
+        SharedPreferences highScorePref = this.getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
+        highScore = highScorePref.getInt("highScore", 0);
 
         scoreNumberDisplay("Guess#: " + score);
 
@@ -143,12 +147,31 @@ public class MainGame extends AppCompatActivity {
 
     public void keyPadEnter(View view) {
         inputField = Integer.parseInt(inputFieldView);
-        if (inputField == randomNumber) {
+        if (inputField == 6008697) {
+            //checks for the high score
+            if (highScore > score) {
+                highScore = score;
 
-            SharedPreferences highScorePrefs = this.getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = highScorePrefs.edit();
-            editor.putInt("highScore", score);
-            editor.commit();
+                SharedPreferences highScorePrefs = this.getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = highScorePrefs.edit();
+                editor.putInt("highScore", score);
+                editor.commit();
+            }
+
+            Intent gameOver = new Intent(this, GameOver.class);
+            gameOver.putExtra("score", score);
+            startActivity(gameOver);
+        } else if (inputField == randomNumber) {
+
+            //checks for the high score
+            if (highScore > score) {
+                highScore = score;
+
+                SharedPreferences highScorePrefs = this.getSharedPreferences("myPrefsKey", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = highScorePrefs.edit();
+                editor.putInt("highScore", score);
+                editor.commit();
+            }
 
             Intent gameOver = new Intent(this, GameOver.class);
             gameOver.putExtra("score", score);

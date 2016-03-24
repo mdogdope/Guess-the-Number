@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="to.us.ekimhest.guessinggame.MainActivity"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@drawable/background">
 
 
     <LinearLayout
@@ -24,7 +25,8 @@
         <TextView
             android:id="@+id/score_text_view"
             android:text="Guess#: 1"
-            android:background="@color/darkred"
+            android:textColor="@color/black"
+            android:background="@color/darkblue"
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -35,6 +37,7 @@
         <TextView
             android:id="@+id/guess_number_text_view"
             android:text=""
+            android:textColor="@color/black"
             android:background="@color/blue"
 
             android:layout_width="wrap_content"
@@ -64,8 +67,8 @@
                 android:id="@+id/key_pad_1"
                 android:text="1"
 
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/main_game_buttons"
+                android:layout_height="@dimen/main_game_buttons"
                 android:layout_row="1"
                 android:layout_column="1"
 
@@ -75,8 +78,8 @@
                 android:id="@+id/key_pad_2"
                 android:text="2"
 
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/main_game_buttons"
+                android:layout_height="@dimen/main_game_buttons"
                 android:layout_row="1"
                 android:layout_column="2"
 
@@ -87,8 +90,8 @@
                 android:id="@+id/key_pad_3"
                 android:text="3"
 
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/main_game_buttons"
+                android:layout_height="@dimen/main_game_buttons"
                 android:layout_row="1"
                 android:layout_column="3"
 
@@ -98,8 +101,8 @@
                 android:id="@+id/key_pad_4"
                 android:text="4"
 
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/main_game_buttons"
+                android:layout_height="@dimen/main_game_buttons"
                 android:layout_row="2"
                 android:layout_column="1"
 
@@ -109,8 +112,8 @@
                 android:id="@+id/key_pad_5"
                 android:text="5"
 
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/main_game_buttons"
+                android:layout_height="@dimen/main_game_buttons"
                 android:layout_row="2"
                 android:layout_column="2"
 
@@ -120,8 +123,8 @@
                 android:id="@+id/key_pad_6"
                 android:text="6"
 
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/main_game_buttons"
+                android:layout_height="@dimen/main_game_buttons"
                 android:layout_row="2"
                 android:layout_column="3"
 
@@ -131,8 +134,8 @@
                 android:id="@+id/key_pad_7"
                 android:text="7"
 
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/main_game_buttons"
+                android:layout_height="@dimen/main_game_buttons"
                 android:layout_row="3"
                 android:layout_column="1"
 
@@ -142,8 +145,8 @@
                 android:id="@+id/key_pad_8"
                 android:text="8"
 
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/main_game_buttons"
+                android:layout_height="@dimen/main_game_buttons"
                 android:layout_row="3"
                 android:layout_column="2"
 
@@ -153,8 +156,8 @@
                 android:id="@+id/key_pad_9"
                 android:text="9"
 
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/main_game_buttons"
+                android:layout_height="@dimen/main_game_buttons"
                 android:layout_row="3"
                 android:layout_column="3"
 
@@ -165,8 +168,8 @@
                 android:id="@+id/key_pad_0"
                 android:text="0"
 
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/main_game_buttons"
+                android:layout_height="@dimen/main_game_buttons"
                 android:layout_row="4"
                 android:layout_column="2"
 
@@ -177,8 +180,8 @@
                 android:text="del"
                 android:textSize="12sp"
 
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/main_game_buttons"
+                android:layout_height="@dimen/main_game_buttons"
                 android:layout_row="4"
                 android:layout_column="1"
                 android:scaleType="fitCenter"
@@ -190,8 +193,8 @@
                 android:src="@drawable/thumb_up_black"
                 android:textSize="12sp"
 
-                android:layout_width="48dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/main_game_buttons"
+                android:layout_height="@dimen/main_game_buttons"
                 android:layout_row="4"
                 android:layout_column="3"
                 android:scaleType="fitCenter"
@@ -207,5 +210,5 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"></com.google.android.gms.ads.AdView>
+        ads:adUnitId="@string/banner_ad_unit_id" />
 </RelativeLayout>
